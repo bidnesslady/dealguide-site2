@@ -94,17 +94,53 @@
     </p>
   </div>
 </section>
-  <!-- Offer Package Section -->
-<section id="offer-package" style="padding: 2rem; background-color: #fff;">
-  <h2>Our Offer Package</h2>
-  <ul>
-    <li><strong>Entrepreneurship Training:</strong> Step-by-step programs designed to turn your idea into a digital or service-based business.</li>
-    <li><strong>Startup Funding:</strong> Microgrants and tools to help launch your hustle, no matter your background.</li>
-    <li><strong>Mentorship:</strong> Get paired with experts who’ve walked your path and want to see you win.</li>
-    <li><strong>Supportive Housing:</strong> Transitional housing options for entrepreneurs, creatives, and workers in our programs.</li>
-    <li><strong>Community Hub:</strong> A safe, inspiring space for networking, workshops, and real talk about building wealth and legacy.</li>
-  </ul>
-  <p>Every offering is built around empowerment, equity, and elevation. We don’t just support your dream – we walk with you until it’s real.</p>
-</section>
+  <div class="grid md:grid-cols-3 gap-4 text-center mt-8">
+  <!-- Starter -->
+  <div class="border rounded-2xl p-6 shadow-sm">
+    <h3 class="text-xl font-semibold">Starter</h3>
+    <p class="text-gray-600 my-2">$19/mo – 1 Industry Bot</p>
+    <div class="flex flex-col gap-2 mt-4">
+      <button onclick="openModal('starter')" class="bg-gray-200 text-sm py-1 px-3 rounded-full hover:bg-gray-300">
+        Learn More
+      </button>
+      <a href="#buy-starter" class="bg-indigo-600 text-white text-sm py-1 px-3 rounded-full hover:bg-indigo-700">
+        Buy Now
+      </a>
+    </div>
+  </div>
+
+  <!-- Pro -->
+  <div class="border rounded-2xl p-6 shadow-md bg-indigo-50">
+    <h3 class="text-xl font-semibold">Pro</h3>
+    <p class="text-gray-700 my-2">$39/mo – All 3 Bots + Basic Customization</p>
+    <div class="flex flex-col gap-2 mt-4">
+      <button onclick="openModal('pro')" class="bg-gray-200 text-sm py-1 px-3 rounded-full hover:bg-gray-300">
+        Learn More
+      </button>
+      <a href="#buy-pro" class="bg-indigo-600 text-white text-sm py-1 px-3 rounded-full hover:bg-indigo-700">
+        Buy Now
+      </a>
+    </div>
+  </div>
+
+  <!-- White Label -->
+  <div class="border rounded-2xl p-6 shadow-sm">
+    <h3 class="text-xl font-semibold">White Label</h3>
+    <p class="text-gray-600 my-2">$99/mo – Resell Under Your Brand</p>
+    <div class="flex flex-col gap-2 mt-4">
+      <button onclick="openModal('white')" class="bg-gray-200 text-sm py-1 px-3 rounded-full hover:bg-gray-300">
+        Learn More
+      </button>
+      <a href="#buy-white" class="bg-indigo-600 text-white text-sm py-1 px-3 rounded-full hover:bg-indigo-700">
+        Buy Now
+      </a>
+    </div>
+  </div>
+</div>
+<script>
+  function openModal(plan) {
+    alert(`Details about the ${plan} plan will show here. You can replace this alert with a proper modal.`);
+  }
+</script>
 </body>
 </html>
