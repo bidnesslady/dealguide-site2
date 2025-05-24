@@ -57,8 +57,40 @@
         </div>
       </div>
     </section>
+    </section> <!-- end of hero -->
 
-    <section class="text-center my-16">
+<!-- Paste pricing section here -->
+<section id="pricing" class="py-16 bg-white">
+  <div class="max-w-6xl mx-auto px-4 text-center">
+    <h2 class="text-3xl font-bold text-gray-900 mb-4">Choose Your Plan</h2>
+    <p class="text-gray-600 mb-12">Flexible options to suit your business needs</p>
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+      
+      <!-- Starter Plan -->
+      <div class="border rounded-2xl p-6 shadow-md">
+        <h3 class="text-xl font-semibold mb-2">Starter</h3>
+        <p class="text-gray-700 mb-4">$19/mo - 1 Industry Bot</p>
+        <button onclick="openModal('starter')" class="bg-indigo-600 text-white px-4 py-2 rounded-lg w-full">Learn More</button>
+      </div>
+      
+      <!-- Pro Plan -->
+      <div class="border rounded-2xl p-6 shadow-md bg-indigo-50">
+        <h3 class="text-xl font-semibold mb-2">Pro</h3>
+        <p class="text-gray-700 mb-4">$39/mo - All 3 Bots + Basic Customization</p>
+        <button onclick="openModal('pro')" class="bg-indigo-600 text-white px-4 py-2 rounded-lg w-full">Learn More</button>
+      </div>
+
+      <!-- White Label Plan -->
+      <div class="border rounded-2xl p-6 shadow-md">
+        <h3 class="text-xl font-semibold mb-2">White Label</h3>
+        <p class="text-gray-700 mb-4">$99/mo - Resell Under Your Brand</p>
+        <button onclick="openModal('white')" class="bg-indigo-600 text-white px-4 py-2 rounded-lg w-full">Learn More</button>
+      </div>
+
+    </div>
+  </div>
+</section>
+<section class="text-center my-16">
       <h2 class="text-2xl font-semibold mb-4">FAQs</h2>
       <p>Need help? Email us anytime.</p>
     </section>
@@ -94,53 +126,5 @@
     </p>
   </div>
 </section>
-  <div class="grid md:grid-cols-3 gap-4 text-center mt-8">
-  <!-- Starter -->
-  <div class="border rounded-2xl p-6 shadow-sm">
-    <h3 class="text-xl font-semibold">Starter</h3>
-    <p class="text-gray-600 my-2">$19/mo – 1 Industry Bot</p>
-    <div class="flex flex-col gap-2 mt-4">
-      <button onclick="openModal('starter')" class="bg-gray-200 text-sm py-1 px-3 rounded-full hover:bg-gray-300">
-        Learn More
-      </button>
-      <a href="#buy-starter" class="bg-indigo-600 text-white text-sm py-1 px-3 rounded-full hover:bg-indigo-700">
-        Buy Now
-      </a>
-    </div>
-  </div>
-
-  <!-- Pro -->
-  <div class="border rounded-2xl p-6 shadow-md bg-indigo-50">
-    <h3 class="text-xl font-semibold">Pro</h3>
-    <p class="text-gray-700 my-2">$39/mo – All 3 Bots + Basic Customization</p>
-    <div class="flex flex-col gap-2 mt-4">
-      <button onclick="openModal('pro')" class="bg-gray-200 text-sm py-1 px-3 rounded-full hover:bg-gray-300">
-        Learn More
-      </button>
-      <a href="#buy-pro" class="bg-indigo-600 text-white text-sm py-1 px-3 rounded-full hover:bg-indigo-700">
-        Buy Now
-      </a>
-    </div>
-  </div>
-
-  <!-- White Label -->
-  <div class="border rounded-2xl p-6 shadow-sm">
-    <h3 class="text-xl font-semibold">White Label</h3>
-    <p class="text-gray-600 my-2">$99/mo – Resell Under Your Brand</p>
-    <div class="flex flex-col gap-2 mt-4">
-      <button onclick="openModal('white')" class="bg-gray-200 text-sm py-1 px-3 rounded-full hover:bg-gray-300">
-        Learn More
-      </button>
-      <a href="#buy-white" class="bg-indigo-600 text-white text-sm py-1 px-3 rounded-full hover:bg-indigo-700">
-        Buy Now
-      </a>
-    </div>
-  </div>
-</div>
-<script>
-  function openModal(plan) {
-    alert(`Details about the ${plan} plan will show here. You can replace this alert with a proper modal.`);
-  }
-</script>
 </body>
 </html>
