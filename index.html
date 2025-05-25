@@ -14,6 +14,7 @@
     border-radius: 5px;
     cursor: pointer;
   }
+<button onclick="openModal('aboutModal')" class="...">About</button>
 
   .about-btn:hover {
     background-color: #111827;
@@ -30,6 +31,38 @@
     overflow: auto;
     background-color: rgba(0, 0, 0, 0.7);
   }
+<button onclick="openModal('faqModal')" class="px-6 py-3 bg-indigo-600 text-white font-bold rounded-lg hover:bg-indigo-700 transition">
+  FAQs
+</button>
+<div id="aboutModal" class="fixed inset-0 ...
+<div id="faqModal" class="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center hidden z-50">
+  <div class="bg-white rounded-xl p-8 max-w-2xl w-full relative shadow-2xl">
+    <button onclick="closeModal('faqModal')" class="absolute top-3 right-3 text-gray-500 hover:text-black text-xl">&times;</button>
+    <h2 class="text-2xl font-bold mb-6 text-center">Frequently Asked Questions</h2>
+    
+    <div class="space-y-4">
+      <div>
+        <button class="faq-question font-semibold w-full text-left" onclick="toggleFAQ(this)">What’s included in each pricing tier?</button>
+        <div class="faq-answer hidden text-gray-700 mt-2">Each tier offers different levels of access: Starter includes one industry-specific bot, Pro gives access to all bots plus basic customization, and White Label allows full reselling under your brand.</div>
+      </div>
+
+      <div>
+        <button class="faq-question font-semibold w-full text-left" onclick="toggleFAQ(this)">Can I customize the bots for my business?</button>
+        <div class="faq-answer hidden text-gray-700 mt-2">Yes! The Pro and White Label plans include customization options to fit your business needs.</div>
+      </div>
+
+      <div>
+        <button class="faq-question font-semibold w-full text-left" onclick="toggleFAQ(this)">Do I need technical skills to use DealGuide AI?</button>
+        <div class="faq-answer hidden text-gray-700 mt-2">Nope! Our bots are plug-and-play with guided setup. No coding required.</div>
+      </div>
+
+      <div>
+        <button class="faq-question font-semibold w-full text-left" onclick="toggleFAQ(this)">How does the white-label option work?</button>
+        <div class="faq-answer hidden text-gray-700 mt-2">You get access to our AI bots under your own branding, with resell rights and our backend support.</div>
+      </div>
+    </div>
+  </div>
+</div>
 
   .modal-content {
     background-color: #fff;
@@ -175,6 +208,12 @@
       modal.style.display = "none";
     }
   };
+</script>
+<script>
+  function toggleFAQ(button) {
+    const answer = button.nextElementSibling;
+    answer.classList.toggle('hidden');
+  }
 </script>
 
 </body>
