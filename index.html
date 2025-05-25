@@ -31,38 +31,20 @@
     overflow: auto;
     background-color: rgba(0, 0, 0, 0.7);
   }
-<button onclick="openModal('faqModal')" class="px-6 py-3 bg-indigo-600 text-white font-bold rounded-lg hover:bg-indigo-700 transition">
-  FAQs
-</button>
-<div id="aboutModal" class="fixed inset-0 ...
-<div id="faqModal" class="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center hidden z-50">
-  <div class="bg-white rounded-xl p-8 max-w-2xl w-full relative shadow-2xl">
-    <button onclick="closeModal('faqModal')" class="absolute top-3 right-3 text-gray-500 hover:text-black text-xl">&times;</button>
-    <h2 class="text-2xl font-bold mb-6 text-center">Frequently Asked Questions</h2>
+<button id="faqBtn" class="about-btn">FAQs</button>
+
     
-    <div class="space-y-4">
-      <div>
-        <button class="faq-question font-semibold w-full text-left" onclick="toggleFAQ(this)">What’s included in each pricing tier?</button>
-        <div class="faq-answer hidden text-gray-700 mt-2">Each tier offers different levels of access: Starter includes one industry-specific bot, Pro gives access to all bots plus basic customization, and White Label allows full reselling under your brand.</div>
-      </div>
-
-      <div>
-        <button class="faq-question font-semibold w-full text-left" onclick="toggleFAQ(this)">Can I customize the bots for my business?</button>
-        <div class="faq-answer hidden text-gray-700 mt-2">Yes! The Pro and White Label plans include customization options to fit your business needs.</div>
-      </div>
-
-      <div>
-        <button class="faq-question font-semibold w-full text-left" onclick="toggleFAQ(this)">Do I need technical skills to use DealGuide AI?</button>
-        <div class="faq-answer hidden text-gray-700 mt-2">Nope! Our bots are plug-and-play with guided setup. No coding required.</div>
-      </div>
-
-      <div>
-        <button class="faq-question font-semibold w-full text-left" onclick="toggleFAQ(this)">How does the white-label option work?</button>
-        <div class="faq-answer hidden text-gray-700 mt-2">You get access to our AI bots under your own branding, with resell rights and our backend support.</div>
-      </div>
-    </div>
+    <!-- FAQ Modal -->
+<div id="faqModal" class="modal">
+  <div class="modal-content">
+    <span class="close">&times;</span>
+    <h2>Frequently Asked Questions</h2>
+    <p><strong>Q:</strong> Can I use DealGuide AI with any website?<br><strong>A:</strong> Yes! You can embed your AI bot anywhere.</p>
+    <p><strong>Q:</strong> What’s included in each pricing tier?<br><strong>A:</strong> Starter gives you 1 industry bot. Pro includes all 3 bots with customization. White Label lets you resell under your brand.</p>
+    <p><strong>Q:</strong> Can I cancel anytime?<br><strong>A:</strong> Yes, there are no long-term contracts.</p>
   </div>
 </div>
+
 
   .modal-content {
     background-color: #fff;
@@ -215,6 +197,45 @@
     answer.classList.toggle('hidden');
   }
 </script>
+  <script>
+  const faqModal = document.getElementById("faqModal");
+  const faqBtn = document.getElementById("faqBtn");
+  const closeFaqModal = document.querySelector("#faqModal .close");
+
+  faqBtn.onclick = function () {
+    faqModal.style.display = "block";
+  };
+
+  closeFaqModal.onclick = function () {
+    faqModal.style.display = "none";
+  };
+
+  window.onclick = function (event) {
+    if (event.target === faqModal) {
+      faqModal.style.display = "none";
+    }
+  };
+</script>
+<script>
+  const faqModal = document.getElementById("faqModal");
+  const faqBtn = document.getElementById("faqBtn");
+  const closeFaqModal = document.querySelector("#faqModal .close");
+
+  faqBtn.onclick = function () {
+    faqModal.style.display = "block";
+  };
+
+  closeFaqModal.onclick = function () {
+    faqModal.style.display = "none";
+  };
+
+  window.onclick = function (event) {
+    if (event.target === faqModal) {
+      faqModal.style.display = "none";
+    }
+  };
+</script>
+
 
 </body>
 </html>
