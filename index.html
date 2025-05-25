@@ -5,12 +5,62 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>DealGuide AI</title>
   <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+  <style>
+  .about-btn {
+    padding: 10px 20px;
+    background-color: #1f2937;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+
+  .about-btn:hover {
+    background-color: #111827;
+  }
+
+  .modal {
+    display: none;
+    position: fixed;
+    z-index: 999;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.7);
+  }
+
+  .modal-content {
+    background-color: #fff;
+    margin: 10% auto;
+    padding: 30px;
+    border: 1px solid #888;
+    width: 90%;
+    max-width: 600px;
+    border-radius: 10px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+  }
+
+  .close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+    cursor: pointer;
+  }
+
+  .close:hover {
+    color: black;
+  }
+</style>
+
 </head>
 <body class="bg-white text-gray-900">
   <header class="text-center p-6 bg-indigo-600 text-white">
     <h1 class="text-4xl font-bold">DealGuide AI</h1>
     <p class="text-lg mt-2">Your AI Sales Assistant for Coaches, Digital Sellers, and Real Estate Pros</p>
-  </header>
+    </header>
 
   <main class="p-6">
     <section class="text-center my-10">
@@ -97,16 +147,35 @@
   <script>
 (function(){if(!window.chatbase||window.chatbase("getState")!=="initialized"){window.chatbase=(...arguments)=>{if(!window.chatbase.q){window.chatbase.q=[]}window.chatbase.q.push(arguments)};window.chatbase=new Proxy(window.chatbase,{get(target,prop){if(prop==="q"){return target.q}return(...args)=>target(prop,...args)}})}const onLoad=function(){const script=document.createElement("script");script.src="https://www.chatbase.co/embed.min.js";script.id="5JOhWwAvXyrejbcyRQPag";script.domain="www.chatbase.co";document.body.appendChild(script)};if(document.readyState==="complete"){onLoad()}else{window.addEventListener("load",onLoad)}})();
 </script>
-  <section id="about" style="padding: 2rem; background-color: #f9f9f9;">
-  <div style="max-width: 800px; margin: auto;">
-    <h2 style="color: #1e293b; font-size: 2rem;">About Us</h2>
-    <p style="font-size: 1.1rem; line-height: 1.6; color: #334155;">
-      Welcome to our space—a hub for connection, empowerment, and support. Our mission is to uplift individuals and communities through accessible tools, inspiring resources, and a network of like-minded people ready to thrive. Whether you're here to explore opportunities, gain knowledge, or just feel seen, you're in the right place.
-    </p>
-    <p style="font-size: 1.1rem; line-height: 1.6; color: #334155;">
-      With Kai—your EmpowerBot—by your side, we're redefining the digital experience. She’s not just a chatbot—she’s your virtual guide, here to answer questions, suggest helpful resources, and help you navigate this platform with ease and confidence.
+  <!-- About Button -->
+<button onclick="openAboutModal()" class="about-btn">About DealGuide AI</button>
+<!-- About Modal -->
+<div id="aboutModal" class="modal">
+  <div class="modal-content">
+    <span class="close" onclick="closeAboutModal()">&times;</span>
+    <h2>About DealGuide AI</h2>
+    <p>
+      DealGuide AI is your digital sales closer — designed to help coaches, real estate agents, and digital product sellers boost conversions. Our conversational AI agents handle objections, answer questions, and close more deals on your behalf. Whether you're starting small or scaling big, DealGuide AI works around the clock to bring in sales.
     </p>
   </div>
-</section>
+</div>
+<script>
+  function openAboutModal() {
+    document.getElementById("aboutModal").style.display = "block";
+  }
+
+  function closeAboutModal() {
+    document.getElementById("aboutModal").style.display = "none";
+  }
+
+  // Optional: close modal if user clicks outside
+  window.onclick = function (event) {
+    const modal = document.getElementById("aboutModal");
+    if (event.target == modal) {
+      modal.style.display = "none";
+    }
+  };
+</script>
+
 </body>
 </html>
