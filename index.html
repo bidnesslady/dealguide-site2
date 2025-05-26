@@ -34,16 +34,27 @@
 <button id="faqBtn" class="about-btn">FAQs</button>
 
     
-    <!-- FAQ Modal -->
-<div id="faqModal" class="modal">
-  <div class="modal-content">
-    <span class="close">&times;</span>
-    <h2>Frequently Asked Questions</h2>
-    <p><strong>Q:</strong> Can I use DealGuide AI with any website?<br><strong>A:</strong> Yes! You can embed your AI bot anywhere.</p>
-    <p><strong>Q:</strong> What’s included in each pricing tier?<br><strong>A:</strong> Starter gives you 1 industry bot. Pro includes all 3 bots with customization. White Label lets you resell under your brand.</p>
-    <p><strong>Q:</strong> Can I cancel anytime?<br><strong>A:</strong> Yes, there are no long-term contracts.</p>
+    <div id="faqModal" class="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center hidden z-50">
+  <div class="bg-white rounded-xl p-8 max-w-2xl w-full relative shadow-2xl">
+    <button onclick="closeModal('faqModal')" class="absolute top-4 right-4 text-gray-500 hover:text-black text-xl">&times;</button>
+    <h2 class="text-2xl font-bold mb-6 text-center">Frequently Asked Questions</h2>
+    <ul class="space-y-4">
+      <li>
+        <strong>What's included in each pricing tier?</strong>
+        <p>Each tier offers different levels of access. Starter includes one industry-specific bot, Pro allows up to 3 bots with custom prompts, and White Label offers full branding and deployment support.</p>
+      </li>
+      <li>
+        <strong>Can I customize the bot for my business?</strong>
+        <p>Yes! The Pro and White Label plans include customization options to fit your niche, tone, and goals.</p>
+      </li>
+      <li>
+        <strong>Do I need technical skills to use this?</strong>
+        <p>No! Our bots are plug-and-play with guided setup. No coding required.</p>
+      </li>
+    </ul>
   </div>
 </div>
+
 
 
   .modal-content {
