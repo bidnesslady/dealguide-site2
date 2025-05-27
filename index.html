@@ -36,13 +36,17 @@
 
 
     
-    <div id="faqModal" class="modal">
-  <div class="modal-content">
-    <span class="close" onclick="closeModal('faqModal')">&times;</span>
-    <h2>Frequently Asked Questions</h2>
-    <p>Insert your FAQ content here.</p>
+    <!-- FAQ Modal -->
+<div id="faqModal" class="fixed inset-0 z-50 hidden bg-black bg-opacity-50 flex items-center justify-center">
+  <div class="bg-white rounded-lg shadow-lg max-w-md w-full p-6 relative">
+    <button onclick="closeModal('faqModal')" class="absolute top-2 right-2 text-gray-500 hover:text-gray-700 text-2xl font-bold">
+      &times;
+    </button>
+    <h2 class="text-xl font-semibold mb-4">Frequently Asked Questions</h2>
+    <p class="text-gray-700">Insert your FAQ content here.</p>
   </div>
 </div>
+
 
 
 
