@@ -199,29 +199,12 @@
 <script>
   <script>
   function openModal(id) {
-    const modal = document.getElementById(id);
-    if (modal) {
-      modal.style.display = 'block';
-    }
+    document.getElementById(id).classList.remove('hidden');
   }
 
   function closeModal(id) {
-    const modal = document.getElementById(id);
-    if (modal) {
-      modal.style.display = 'none';
-    }
-  }
-
-  // Optional: Close modals if user clicks outside the content
-  window.onclick = function(event) {
-    const modals = document.querySelectorAll(".modal");
-    modals.forEach(modal => {
-      if (event.target === modal) {
-        modal.style.display = "none";
-      }
-    });
+    document.getElementById(id).classList.add('hidden');
   }
 </script>
-
-  </body>
+</body>
 </html>
