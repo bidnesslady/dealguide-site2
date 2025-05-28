@@ -177,6 +177,35 @@
   </div>
 </div>
 
+<script>
+  function openModal(id) {
+    const modal = document.getElementById(id);
+    if (modal) {
+      modal.style.display = 'flex'; // For FAQ modal using Flexbox
+    }
+  }
+
+  function closeModal(id) {
+    const modal = document.getElementById(id);
+    if (modal) {
+      modal.style.display = 'none';
+    }
+  }
+
+  function openAboutModal() {
+    const modal = document.getElementById('aboutModal');
+    if (modal) {
+      modal.style.display = 'block'; // For About modal using block
+    }
+  }
+
+  function closeAboutModal() {
+    const modal = document.getElementById('aboutModal');
+    if (modal) {
+      modal.style.display = 'none';
+    }
+  }
+</script>
 
 </body>
 </html>
