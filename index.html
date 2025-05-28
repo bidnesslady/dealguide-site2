@@ -1,1 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>DealGuide AI</title>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+  <style>
+    .modal {
+      position: fixed;
+      z-index: 50;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      overflow: auto;
+      background-color: rgba(0, 0, 0, 0.4);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .modal-content {
+      background-color: white;
+      padding: 2rem;
+      border-radius: 0.5rem;
+      width: 90%;
+      max-width: 500px;
+      position: relative;
+    }
+
+    .close {
+      position: absolute;
+      top: 1rem;
+      right: 1rem;
+      color: #aaa;
+      font-size: 1.5rem;
+      font-weight: bold;
+      cursor: pointer;
+    }
+
+    .close:hover {
+      color: #000;
+    }
+  </style>
+</head>
+<body class="bg-gray-50 min-h-screen flex items-center justify-center">
+
+  <div class="text-center space-y-6">
+    <h1 class="text-4xl font-bold text-gray-900">DealGuide AI</h1>
+    <p class="text-lg text-gray-700">Your digital sales closer for coaches, creators, and agents.</p>
+    
+    <div class="space-x-4">
+      <button onclick="openAboutModal()" class="bg-blue-600 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">
+        About
+      </button>
+      <button onclick="openModal('faqModal')" class="bg-green-600 hover:bg-green-700 text-white font-bold py-2 px-4 rounded">
+        FAQ
+      </button>
+    </div>
+  </div>
+
+  <!-- About Modal -->
+  <div id="aboutModal" class="modal hidden">
+    <div class="modal-content">
+      <span class="close" onclick="closeAboutModal()">&times;</span>
+      <h2 class="text-2xl font-semibold mb-4">About DealGuide AI</h2>
+      <p>DealGuide AI is your digital sales closer, designed to help coaches, digital sellers, and real estate agents close more deals with less stress. Our AI-powered assistant engages leads, answers questions, and guides them to take action — all in your voice and style.</p>
+    </div>
+  </div>
+
+  <!-- FAQ Modal -->
+  <div id="faqModal" class="modal hidden">
+    <div class="modal-content">
+      <button onclick="closeModal('faqModal')" class="close">&times;</button>
+      <h2 class="text-2xl font-semibold mb-4">Frequently Asked Questions</h2>
+      <p class="text-gray-700">Insert your FAQ content here.</p>
+    </div>
+  </div>
+
+  <!-- JavaScript -->
+  <script>
+    function openModal(id) {
+      document.getElementById(id).classList.remove("hidden");
+    }
+
+    function closeModal(id) {
+      document.getElementById(id).classList.add("hidden");
+    }
+
+    function openAboutModal() {
+      document.getElementById("aboutModal").classList.remove("hidden");
+    }
+
+    function closeAboutModal() {
+      document.getElementById("aboutModal").classList.add("hidden");
+    }
+  </script>
+</body>
+<html>
+
 
