@@ -1,3 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>DealGuide AI</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    .modal {
+      display: none;
+      position: fixed;
+      z-index: 50;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      overflow: auto;
+      background-color: rgba(0,0,0,0.5);
+    }
+    .modal-content {
+      background-color: #fff;
+      margin: 10% auto;
+      padding: 2rem;
+      border: 1px solid #ccc;
+      width: 90%;
+      max-width: 600px;
+      border-radius: 1rem;
+    }
+    .close {
+      color: #000;
+      float: right;
+      font-size: 1.5rem;
+      font-weight: bold;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body class="bg-white text-gray-800 font-sans p-6">
 
+  <!-- Header -->
+  <div class="text-center mb-8">
+    <h1 class="text-4xl font-bold text-blue-900">DealGuide AI</h1>
+    <p class="text-lg text-gray-600 mt-2">Your AI Sales Assistant for Coaches, Creators, and Real Estate Pros</p>
+    <div class="mt-4 space-x-4">
+      <button onclick="openModal('aboutModal')" class="bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700 transition">About</button>
+      <button onclick="openModal('faqModal')" class="bg-gray-600 text-white px-4 py-2 rounded hover:bg-gray-700 transition">FAQ</button>
+    </div>
+  </div>
+
+  <!-- Main Content Area -->
+  <div class="text-center mb-12">
+    <p class="text-xl font-medium mb-4">Ready to close more sales with less effort?</p>
+    <p class="text-md text-gray-700 mb-6">Our AI assistant handles lead questions, objections, and follow-up — so you can focus on what you do best.</p>
+  </div>
+
+  <!-- Chatbot Embed (add your actual code here) -->
+  <div class="fixed bottom-6 right-6">
+    <!-- EXAMPLE PLACEHOLDER CHATBOT -->
+    <script src="https://cdn.botpress.cloud/webchat/v1/inject.js"></script>
+    <script>
+      window.botpressWebChat.init({
+        "botId": "your-bot-id",
+        "hostUrl": "https://cdn.botpress.cloud/webchat/v1",
+        "messagingUrl": "https://messaging.botpress.cloud",
+        "clientId": "your-bot-id",
+        "lazyLoad": true,
+        "botName": "DealGuide AI Assistant",
+        "showPoweredBy": false,
+        "enableConversationDeletion": true,
+        "stylesheet": "https://your-custom-style.css",
+      });
+    </script>
+  </div>
+
+  <!-- About Modal -->
+  <div id="aboutModal" class="modal">
+    <div class="modal-content">
+      <span class="close" onclick="closeModal('aboutModal')">&times;</span>
+      <h2 class="text-2xl font-semibold mb-4">About DealGuide AI</h2>
+      <p>
+        DealGuide AI helps coaches, creators, and real estate pros close more sales using a personalized AI assistant. 
+        Our tool speaks in your voice, handles objections, and guides leads to action — so you can work smarter, not harder.
+      </p>
+    </div>
+  </div>
+
+  <!-- FAQ Modal -->
+  <div id="faqModal" class="modal">
+    <div class="modal-content">
+      <span class="close" onclick="closeModal('faqModal')">&times;</span>
+      <h2 class="text-2xl font-semibold mb-4">Frequently Asked Questions</h2>
+      <div class="space-y-4 text-left text-gray-800">
+        <div>
+          <h3 class="font-bold">What is DealGuide AI?</h3>
+          <p>DealGuide AI is a conversational assistant that helps you close more sales by guiding leads, answering questions, and overcoming objections in your voice and tone.</p>
+        </div>
+        <div>
+          <h3 class="font-bold">Who is this for?</h3>
+          <p>It’s designed for coaches, digital product sellers, and real estate agents who want help converting curious visitors into paying clients — without doing all the selling themselves.</p>
+        </div>
+        <div>
+          <h3 class="font-bold">How does it work?</h3>
+          <p>You train the AI by answering a few questions and providing your key selling points. We then create a tailored digital agent that can chat, follow up, and guide users to book or buy.</p>
+        </div>
+        <div>
+          <h3 class="font-bold">Can I customize my assistant?</h3>
+          <p>Yes! You can choose how your assistant sounds, what it says, and where it appears on your site or store.</p>
+        </div>
+        <div>
+          <h3 class="font-bold">Do I need to know how to code?</h3>
+          <p>No coding needed. If you can copy and paste, you can install and use DealGuide AI.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Modal Script -->
+  <script>
+    function openModal(id) {
+      document.getElementById(id).style.display = "block";
+    }
+
+    function closeModal(id) {
+      document.getElementById(id).style.display = "none";
+    }
+
+    window.onclick = function(event) {
+      if (event.target.classList.contains('modal')) {
+        event.target.style.display = "none";
+      }
+    }
+  </script>
+</body>
+        </html>
+        
 
         
