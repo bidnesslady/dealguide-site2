@@ -7,42 +7,17 @@
   <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
 </head>
 <body class="bg-white text-gray-900">
+
+  <!-- Header -->
   <header class="text-center p-6 bg-indigo-600 text-white">
     <h1 class="text-4xl font-bold">DealGuide AI</h1>
     <p class="text-lg mt-2">Your AI Sales Assistant for Coaches, Digital Sellers, and Real Estate Pros</p>
   </header>
-  <!-- About Section -->
-  <section class="text-center my-16">
-    <h2 class="text-2xl font-semibold mb-4">About DealGuide AI</h2>
-    <p class="max-w-2xl mx-auto">
-      DealGuide AI is an innovative sales assistant designed to help coaches, digital product sellers, and real estate pros close more deals — without burning out. Whether you're booking calls or converting cold leads, your AI Closer is always working.
-    </p>
-  </section>
 
-  <!-- FAQs Section -->
-  <section class="text-center my-16">
-    <h2 class="text-2xl font-semibold mb-4">FAQs</h2>
-    <div class="max-w-2xl mx-auto space-y-4 text-left">
-      <div>
-        <h3 class="font-bold">What is DealGuide AI?</h3>
-        <p>It’s an AI-powered chatbot built to close sales, answer questions, and book calls in your niche.</p>
-      </div>
-      <div>
-        <h3 class="font-bold">Can I customize my AI closer?</h3>
-        <p>Yes — especially on the Pro and White Label plans. You can update responses, tone, and brand feel.</p>
-      </div>
-      <div>
-        <h3 class="font-bold">How do I embed it on my site?</h3>
-        <p>We provide a code snippet you can drop onto your website or landing page. No coding needed.</p>
-      </div>
-      <div>
-        <h3 class="font-bold">What support do you offer?</h3>
-        <p>Email support is available on all plans. Pro and White Label users get setup help and custom guidance.</p>
-      </div>
-    </div>
-  </section>
-
+  <!-- Main Content -->
   <main class="p-6">
+
+    <!-- Choose Section -->
     <section class="text-center my-10">
       <h2 class="text-2xl font-semibold mb-4">Choose Your AI Closer</h2>
       <div class="grid md:grid-cols-3 gap-6">
@@ -61,6 +36,7 @@
       </div>
     </section>
 
+    <!-- How It Works -->
     <section class="text-center my-16">
       <h2 class="text-2xl font-semibold mb-4">How It Works</h2>
       <ol class="space-y-2">
@@ -70,6 +46,7 @@
       </ol>
     </section>
 
+    <!-- Pricing -->
     <section class="text-center my-16">
       <h2 class="text-2xl font-semibold mb-4">Pricing</h2>
       <div class="grid md:grid-cols-3 gap-6">
@@ -88,21 +65,59 @@
       </div>
     </section>
 
+    <!-- About Section -->
+    <section class="text-center my-16">
+      <h2 class="text-2xl font-semibold mb-4">About</h2>
+      <p>DealGuide AI helps coaches, digital product sellers, and real estate pros close more sales using smart, customizable AI agents like Kai. Built for busy entrepreneurs who need a reliable, friendly closer working 24/7.</p>
+    </section>
+
+    <!-- FAQs -->
     <section class="text-center my-16">
       <h2 class="text-2xl font-semibold mb-4">FAQs</h2>
-      <p>Need help? Email us anytime.</p>
+      <ul class="space-y-4">
+        <li><strong>Q:</strong> How do I start?<br><strong>A:</strong> Choose your industry, set up your bot, and embed it!</li>
+        <li><strong>Q:</strong> Can I customize the bot?<br><strong>A:</strong> Yes! Our Pro and White Label plans offer full customization.</li>
+        <li><strong>Q:</strong> Is support available?<br><strong>A:</strong> Absolutely. Reach out via email anytime.</li>
+      </ul>
     </section>
+
   </main>
 
+  <!-- Footer -->
   <footer class="text-center p-6 bg-gray-100">
     <p>&copy; 2025 DealGuide AI</p>
   </footer>
 
+  <!-- Chatbase Kai Bot Script -->
   <script>
-(function(){if(!window.chatbase||window.chatbase("getState")!=="initialized"){window.chatbase=(...arguments)=>{if(!window.chatbase.q){window.chatbase.q=[]}window.chatbase.q.push(arguments)};window.chatbase=new Proxy(window.chatbase,{get(target,prop){if(prop==="q"){return target.q}return(...args)=>target(prop,...args)}})}const onLoad=function(){const script=document.createElement("script");script.src="https://www.chatbase.co/embed.min.js";script.id="Wctg7kjYIwL6_3us9hpvQ";script.domain="www.chatbase.co";document.body.appendChild(script)};if(document.readyState==="complete"){onLoad()}else{window.addEventListener("load",onLoad)}})();
-</script>
+    (function(){
+      if(!window.chatbase || window.chatbase("getState")!=="initialized"){
+        window.chatbase=(...arguments)=>{
+          if(!window.chatbase.q){ window.chatbase.q=[] }
+          window.chatbase.q.push(arguments)
+        };
+        window.chatbase = new Proxy(window.chatbase,{
+          get(target,prop){
+            if(prop==="q"){ return target.q }
+            return (...args)=>target(prop,...args)
+          }
+        })
+      }
+      const onLoad = function(){
+        const script = document.createElement("script");
+        script.src = "https://www.chatbase.co/embed.min.js";
+        script.id = "Wctg7kjYIwL6_3us9hpvQ";  // ← Replace with YOUR bot ID if different
+        script.domain = "www.chatbase.co";
+        document.body.appendChild(script);
+      };
+      if(document.readyState==="complete"){ onLoad() }
+      else{ window.addEventListener("load", onLoad) }
+    })();
+  </script>
+
 </body>
 </html>
+
 
 
 
