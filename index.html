@@ -1,2 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>DealGuide AI</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      padding: 2rem;
+      background-color: #f9f9f9;
+      color: #333;
+    }
+    h1 {
+      color: #1e3a8a;
+    }
+    button {
+      margin: 1rem 1rem 1rem 0;
+      padding: 0.5rem 1rem;
+      background-color: #1e3a8a;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+    .section {
+      display: none;
+      margin-top: 1rem;
+      background: white;
+      padding: 1rem;
+      border: 1px solid #ccc;
+      border-radius: 8px;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>DealGuide AI</h1>
+  <p>Meet EmpowerBot-Kai, your AI sales assistant.</p>
+
+  <button onclick="showSection('about')">About</button>
+  <button onclick="showSection('faq')">FAQ</button>
+
+  <div id="about" class="section">
+    <h2>About DealGuide AI</h2>
+    <p>
+      DealGuide AI empowers coaches, creators, and agents by automating sales conversations with smart, responsive AI.
+      Kai, your EmpowerBot, helps answer questions, close deals, and guide your leads—all day, every day.
+    </p>
+  </div>
+
+  <div id="faq" class="section">
+    <h2>Frequently Asked Questions</h2>
+    <ul>
+      <li><strong>What is DealGuide AI?</strong> An AI sales agent that helps boost your conversions.</li>
+      <li><strong>What does Kai do?</strong> Kai answers FAQs, handles objections, and nurtures leads for you.</li>
+      <li><strong>Who can use it?</strong> Perfect for coaches, digital product sellers, and real estate professionals.</li>
+    </ul>
+  </div>
+
+  <!-- Script to toggle sections -->
+  <script>
+    function showSection(id) {
+      document.querySelectorAll('.section').forEach(el => el.style.display = 'none');
+      document.getElementById(id).style.display = 'block';
+    }
+  </script>
+
+  <!-- Chatbase Embed Script for Kai -->
+  <script>
+    (function () {
+      if (!window.chatbase || window.chatbase("getState") !== "initialized") {
+        window.chatbase = (...arguments) => {
+          if (!window.chatbase.q) window.chatbase.q = [];
+          window.chatbase.q.push(arguments);
+        };
+        window.chatbase = new Proxy(window.chatbase, {
+          get(target, prop) {
+            if (prop === "q") return target.q;
+            return (...args) => target(prop, ...args);
+          }
+        });
+      }
+
+      const onLoad = function () {
+        const script = document.createElement("script");
+        script.src = "https://www.chatbase.co/embed.min.js";
+        script.id = "Wctg7kjYIwL6_3us9hpvQ"; // Kai's bot ID
+        script.domain = "www.chatbase.co";
+        document.body.appendChild(script);
+      };
+
+      if (document.readyState === "complete") {
+        onLoad();
+      } else {
+        window.addEventListener("load", onLoad);
+      }
+    })();
+  </script>
+
+</body>
+</html>
 
 
