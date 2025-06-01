@@ -1,1 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>DealGuide AI</title>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+</head>
+<body class="bg-white text-gray-900">
+
+  <!-- Header -->
+  <header class="text-center p-6 bg-indigo-600 text-white">
+    <h1 class="text-4xl font-bold">DealGuide AI</h1>
+    <p class="text-lg mt-2">Your AI Sales Assistant for Coaches, Digital Sellers, and Real Estate Pros</p>
+  </header>
+
+  <!-- Main Content -->
+  <main class="p-6">
+
+    <!-- Choose Section -->
+    <section class="text-center my-10">
+      <h2 class="text-2xl font-semibold mb-4">Choose Your AI Closer</h2>
+      <div class="grid md:grid-cols-3 gap-6">
+        <div class="p-4 border rounded-xl shadow-md">
+          <h3 class="text-xl font-bold mb-2">Coaches</h3>
+          <p>Let your AI handle client qualification, Q&A, and booking calls.</p>
+        </div>
+        <div class="p-4 border rounded-xl shadow-md">
+          <h3 class="text-xl font-bold mb-2">Digital Sellers</h3>
+          <p>Let your AI explain offers and close more online product sales.</p>
+        </div>
+        <div class="p-4 border rounded-xl shadow-md">
+          <h3 class="text-xl font-bold mb-2">Real Estate Agents</h3>
+          <p>Have your AI assistant answer buyer/seller questions 24/7.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- How It Works -->
+    <section class="text-center my-16">
+      <h2 class="text-2xl font-semibold mb-4">How It Works</h2>
+      <ol class="space-y-2">
+        <li>1. Choose your industry</li>
+        <li>2. Customize your GPT agent</li>
+        <li>3. Embed it or link it to your website</li>
+      </ol>
+    </section>
+
+    <!-- Pricing -->
+    <section class="text-center my-16">
+      <h2 class="text-2xl font-semibold mb-4">Pricing</h2>
+      <div class="grid md:grid-cols-3 gap-6">
+        <div class="p-4 border rounded-xl shadow-md">
+          <h3 class="text-xl font-bold">Starter</h3>
+          <p>$19/mo — 1 Industry Bot</p>
+        </div>
+        <div class="p-4 border rounded-xl shadow-md bg-indigo-100">
+          <h3 class="text-xl font-bold">Pro</h3>
+          <p>$39/mo — All 3 Bots + Basic Customization</p>
+        </div>
+        <div class="p-4 border rounded-xl shadow-md">
+          <h3 class="text-xl font-bold">White Label</h3>
+          <p>$99/mo — Resell Under Your Brand</p>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Footer -->
+  <footer class="flex flex-col md:flex-row justify-between p-6 bg-gray-100 text-sm text-gray-700">
+    <div class="mb-4 md:mb-0 md:w-1/2">
+      <h2 class="font-semibold mb-2">About DealGuide AI</h2>
+      <p>We help coaches, digital sellers, and real estate pros close more deals with AI-powered assistants.</p>
+
+      <h2 class="font-semibold mt-4 mb-2">FAQs</h2>
+      <ul class="list-disc list-inside space-y-1">
+        <li><strong>Can I customize my bot?</strong> Yes — name, tone, and knowledge base.</li>
+        <li><strong>Does it work on my site?</strong> Yes — just embed or link it.</li>
+        <li><strong>Need help?</strong> Email us anytime for support.</li>
+      </ul>
+    </div>
+    
+    <div class="text-center md:text-right md:w-1/2 mt-4 md:mt-0">
+      <p>&copy; 2025 DealGuide AI</p>
+    </div>
+  </footer>
+
+  <!-- Chatbase Kai Bot Script -->
+  <script>
+    (function(){
+      if(!window.chatbase || window.chatbase("getState")!=="initialized"){
+        window.chatbase=(...arguments)=>{
+          if(!window.chatbase.q){ window.chatbase.q=[] }
+          window.chatbase.q.push(arguments)
+        };
+        window.chatbase = new Proxy(window.chatbase,{
+          get(target,prop){
+            if(prop==="q"){ return target.q }
+            return (...args)=>target(prop,...args)
+          }
+        })
+      }
+      const onLoad = function(){
+        const script = document.createElement("script");
+        script.src = "https://www.chatbase.co/embed.min.js";
+        script.id = "Wctg7kjYIwL6_3us9hpvQ";  // ← Replace with YOUR bot ID if different
+        script.domain = "www.chatbase.co";
+        document.body.appendChild(script);
+      };
+      if(document.readyState==="complete"){ onLoad() }
+      else{ window.addEventListener("load", onLoad) }
+    })();
+  </script>
+
+</body>
+</html>
 
