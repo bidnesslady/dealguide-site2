@@ -72,6 +72,28 @@
     <div class="text-center md:text-right md:w-1/2 mt-4 md:mt-0">
       <p>&copy; 2025 DealGuide AI</p>
     </div>
+  
+<!-- Footer with Modal Triggers -->
+<footer class="bg-gray-100 py-8 mt-12">
+  <div class="container mx-auto text-center space-x-4">
+    <!-- About Button -->
+    <button 
+      @click="showAbout = true" 
+      class="bg-indigo-600 text-white px-4 py-2 rounded-lg hover:bg-indigo-700 transition"
+    >
+      About DealGuide AI
+    </button>
+
+    <!-- FAQ Button -->
+    <button 
+      @click="showFAQ = true" 
+      class="bg-indigo-600 text-white px-4 py-2 rounded-lg hover:bg-indigo-700 transition"
+    >
+      FAQs
+    </button>
+  </div>
+</footer>
+  
   </footer>
 
   <!-- Chatbase Kai Bot Script -->
