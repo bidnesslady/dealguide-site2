@@ -79,6 +79,54 @@
         </div>
       </div>
     </section>
+    
+<form 
+  x-data="{ submitted: false }"
+  x-on:submit.prevent="
+    fetch($el.action, {
+      method: 'POST',
+      body: new FormData($el),
+      headers: { 'Accept': 'application/json' }
+    }).then(() => submitted = true)
+  "
+  action="https://formspree.io/f/xdkzkzde" 
+  method="POST"
+  class="bg-white p-6 rounded-xl shadow-md max-w-xl mx-auto"
+>
+  <div x-show="!submitted">
+    <h2 class="text-2xl font-bold mb-4">Contact Us</h2>
+    <input 
+      type="text" 
+      name="name" 
+      placeholder="Your Name" 
+      required 
+      class="w-full mb-4 p-2 border rounded"
+    />
+    <input 
+      type="email" 
+      name="email" 
+      placeholder="Your Email" 
+      required 
+      class="w-full mb-4 p-2 border rounded"
+    />
+    <textarea 
+      name="message" 
+      placeholder="Your Message" 
+      required 
+      class="w-full mb-4 p-2 border rounded h-32"
+    ></textarea>
+    <button 
+      type="submit" 
+      class="bg-indigo-600 text-white px-4 py-2 rounded hover:bg-indigo-700"
+    >
+      Send Message
+    </button>
+  </div>
+
+  <div x-show="submitted" class="text-center text-green-600 text-lg font-semibold">
+    ✅ Thank you! Your message has been sent.
+  </div>
+</form>
 </body>
   </html>
             
