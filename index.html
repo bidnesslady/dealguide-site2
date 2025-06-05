@@ -88,31 +88,39 @@
     Contact Us
   </button>
 </div>
+<!-- About & FAQ Section -->
+<section class="my-16 max-w-2xl mx-auto" x-data="{ openSection: null }">
+  <!-- About -->
+  <div class="border-b border-gray-300">
+    <button 
+      @click="openSection = openSection === 1 ? null : 1"
+      class="w-full text-left py-4 px-4 font-semibold text-lg bg-indigo-50 hover:bg-indigo-100 transition rounded-t-lg">
+      About DealGuide AI
+    </button>
+    <div x-show="openSection === 1" x-transition class="px-4 pb-4 text-gray-700">
+      <p>
+        DealGuide AI helps coaches, digital sellers, and real estate pros close more sales using smart GPT agents tailored to their industry.
+      </p>
+    </div>
+  </div>
 
+  <!-- FAQs -->
+  <div class="border-b border-gray-300 mt-4">
+    <button 
+      @click="openSection = openSection === 2 ? null : 2"
+      class="w-full text-left py-4 px-4 font-semibold text-lg bg-indigo-50 hover:bg-indigo-100 transition rounded-t-lg">
+      Frequently Asked Questions
+    </button>
+    <div x-show="openSection === 2" x-transition class="px-4 pb-4 text-gray-700 space-y-2">
+      <p><strong>Q:</strong> Can I white-label the bot?</p>
+      <p><strong>A:</strong> Yes! Our White Label plan is designed just for that.</p>
 
-    <!-- About & FAQ (Collapsible) -->
-    <section class="my-16 max-w-2xl mx-auto">
-      <div class="border-b">
-        <button class="w-full text-left py-4 font-semibold text-lg" @click="openSection = openSection === 1 ? null : 1">
-          About DealGuide AI
-        </button>
-        <div x-show="openSection === 1" x-transition class="px-4 pb-4 text-gray-600">
-          DealGuide AI helps service professionals close more sales by using customizable GPT agents trained for their industry.
-        </div>
-      </div>
-      <div class="border-b">
-        <button class="w-full text-left py-4 font-semibold text-lg" @click="openSection = openSection === 2 ? null : 2">
-          Frequently Asked Questions
-        </button>
-        <div x-show="openSection === 2" x-transition class="px-4 pb-4 text-gray-600">
-          <p><strong>Q:</strong> Can I white-label the bot?</p>
-          <p><strong>A:</strong> Yes! Our White Label plan is made for that.</p>
-          <p class="mt-2"><strong>Q:</strong> Do I need coding skills?</p>
-          <p><strong>A:</strong> Not at all. We walk you through setup, step-by-step.</p>
-        </div>
-      </div>
-    </section>
-  </main>
+      <p><strong>Q:</strong> Do I need coding skills?</p>
+      <p><strong>A:</strong> Nope! We guide you through setup without needing to code.</p>
+    </div>
+  </div>
+</section>
+
 
   <!-- Contact Modal -->
   <div id="contactModal" class="hidden fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50">
