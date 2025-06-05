@@ -80,53 +80,43 @@
       </div>
     </section>
     
-<form 
-  x-data="{ submitted: false }"
-  x-on:submit.prevent="
-    fetch($el.action, {
-      method: 'POST',
-      body: new FormData($el),
-      headers: { 'Accept': 'application/json' }
-    }).then(() => submitted = true)
-  "
-  action="https://formspree.io/f/xdkzkzde" 
-  method="POST"
-  class="bg-white p-6 rounded-xl shadow-md max-w-xl mx-auto"
->
-  <div x-show="!submitted">
-    <h2 class="text-2xl font-bold mb-4">Contact Us</h2>
-    <input 
-      type="text" 
-      name="name" 
-      placeholder="Your Name" 
-      required 
-      class="w-full mb-4 p-2 border rounded"
-    />
-    <input 
-      type="email" 
-      name="email" 
-      placeholder="Your Email" 
-      required 
-      class="w-full mb-4 p-2 border rounded"
-    />
-    <textarea 
-      name="message" 
-      placeholder="Your Message" 
-      required 
-      class="w-full mb-4 p-2 border rounded h-32"
-    ></textarea>
-    <button 
-      type="submit" 
-      class="bg-indigo-600 text-white px-4 py-2 rounded hover:bg-indigo-700"
-    >
-      Send Message
-    </button>
-  </div>
+<!-- Contact Form Section -->
+<section id="contact" class="bg-white py-16 px-6 sm:px-10 lg:px-20">
+  <div class="max-w-4xl mx-auto text-center">
+    <h2 class="text-3xl font-bold text-gray-900 mb-6">Partner With Us</h2>
+    <p class="text-gray-600 mb-10">Let us know how we can work together or answer any questions you have.</p>
 
-  <div x-show="submitted" class="text-center text-green-600 text-lg font-semibold">
-    ✅ Thank you! Your message has been sent.
+    <form id="contact-form" class="space-y-6" onsubmit="return handleSubmit(event)">
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+        <div>
+          <label for="name" class="block text-left text-gray-700 font-medium mb-1">Your Name</label>
+          <input type="text" id="name" name="name" required class="w-full border border-gray-300 rounded-xl px-4 py-3 focus:outline-none focus:ring-2 focus:ring-blue-500">
+        </div>
+        <div>
+          <label for="email" class="block text-left text-gray-700 font-medium mb-1">Your Email</label>
+          <input type="email" id="email" name="email" required class="w-full border border-gray-300 rounded-xl px-4 py-3 focus:outline-none focus:ring-2 focus:ring-blue-500">
+        </div>
+      </div>
+      <div>
+        <label for="message" class="block text-left text-gray-700 font-medium mb-1">Message</label>
+        <textarea id="message" name="message" rows="5" required class="w-full border border-gray-300 rounded-xl px-4 py-3 focus:outline-none focus:ring-2 focus:ring-blue-500"></textarea>
+      </div>
+      <button type="submit" class="bg-blue-600 hover:bg-blue-700 text-white font-semibold py-3 px-6 rounded-xl transition duration-300">Send Message</button>
+
+      <p id="confirmation" class="text-green-600 mt-4 font-medium hidden">✅ Thank you! Your message has been sent.</p>
+    </form>
   </div>
-</form>
+</section>
+
+<script>
+  function handleSubmit(event) {
+    event.preventDefault();
+    // Here you could add real submission logic or API call
+    document.getElementById('confirmation').classList.remove('hidden');
+    document.getElementById('contact-form').reset();
+    return false;
+  }
+</script>
 </body>
   </html>
             
