@@ -6,6 +6,66 @@
   <title>DealGuide AI</title>
   <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
   <script src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js" defer></script>
+  <style>
+  /* DealGuide Offer Section - Mobile Friendly */
+  #upgrade {
+    padding: 2rem 1rem;
+    background: #f9f9f9;
+    text-align: center;
+  }
+
+  #upgrade h2 {
+    font-size: 2rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .offer-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 1.5rem;
+    margin-top: 2rem;
+  }
+
+  .offer-card {
+    background: white;
+    border-radius: 1rem;
+    padding: 2rem;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+    transition: transform 0.3s ease;
+  }
+
+  .offer-card:hover {
+    transform: translateY(-5px);
+  }
+
+  .offer-card h3 {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+  }
+
+  .offer-card .price {
+    font-size: 1.2rem;
+    margin: 1rem 0;
+    font-weight: bold;
+  }
+
+  .offer-card a {
+    display: inline-block;
+    padding: 0.75rem 1.5rem;
+    border-radius: 30px;
+    background: #1d4ed8;
+    color: white;
+    font-weight: 600;
+    text-decoration: none;
+    margin-top: 1rem;
+    transition: background 0.3s ease;
+  }
+
+  .offer-card a:hover {
+    background: #2563eb;
+  }
+</style>
+
 </head>
 
 <body class="bg-gray-50">
