@@ -321,16 +321,17 @@ body {
   document.getElementById("year").textContent = new Date().getFullYear();
 </script>
 
-<!-- Kai Chatbot Embed -->
-<div id="kai-chatbot" style="position: fixed; bottom: 20px; right: 20px; width: 360px; height: 500px; background-color: white; border-radius: 12px; box-shadow: 0 0 12px rgba(0,0,0,0.15); z-index: 9999; overflow: hidden;">
+<!-- Kai Chatbot -->
+<div id="kai-chatbot" style="position: fixed; bottom: 20px; right: 20px; width: 100%; max-width: 400px; height: 600px; z-index: 9999; box-shadow: 0 4px 12px rgba(0,0,0,0.15); border-radius: 12px; overflow: hidden;">
   <iframe
     src="https://www.chatbase.co/chatbot-iframe/Wctg7kjYIwL6_3us9hpvQ"
     width="100%"
     height="100%"
-    style="border: none; border-radius: 12px; background-color: white;"
+    frameborder="0"
+    style="border: none;"
     allow="microphone; clipboard-write;"
-    sandbox="allow-scripts allow-same-origin allow-forms allow-popups">
-  </iframe>
+    sandbox="allow-scripts allow-same-origin allow-forms allow-popups"
+  ></iframe>
 </div>
 </body>
 </html>
