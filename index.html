@@ -328,21 +328,9 @@ body {
 </div>
 
 <!-- Kai Chat Modal -->
-<div id="kai-modal" class="fixed inset-0 bg-black bg-opacity-50 hidden z-50 overflow-auto">
-  <div class="flex justify-center items-end sm:items-center min-h-screen">
-    <div class="bg-white rounded-xl w-full max-w-md h-[80vh] p-2 relative shadow-xl">
-      <button onclick="toggleKai()" class="absolute top-2 right-4 text-xl font-bold text-gray-500 hover:text-gray-700">&times;</button>
-      <iframe
-        src="https://www.chatbase.co/chatbot-iframe/Wctg7kjYIwL6_3us9hpvQ"
-        width="100%"
-        height="100%"
-        style="border: none; border-radius: 0.75rem;"
-        allow="microphone; clipboard-write;"
-        sandbox="allow-scripts allow-same-origin allow-forms allow-popups"
-      ></iframe>
-    </div>
-  </div>
-</div>
+<div id="kai-modal" class="hidden fixed inset-0 bg-black bg-opacity-50 z-50">
+  <div class="absolute inset-0 flex justify-center items-end sm:items-center pointer-events-none">
+
 
     <script>
   function toggleKai() {
