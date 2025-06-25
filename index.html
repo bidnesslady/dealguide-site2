@@ -344,24 +344,20 @@ body {
     <script>
   function toggleKai() {
     const modal = document.getElementById('kai-modal');
-    const body = document.body;
-
-    const isOpen = !modal.classList.contains('hidden');
-
-    if (isOpen) {
-      // Hide modal
-      modal.classList.add('hidden');
+    const isVisible = modal.classList.contains('flex');
+    
+    if (isVisible) {
       modal.classList.remove('flex');
-      body.classList.remove('overflow-hidden');
+      modal.classList.add('hidden');
+      document.body.classList.remove('overflow-hidden');
     } else {
-      // Show modal
       modal.classList.remove('hidden');
       modal.classList.add('flex');
-      body.classList.add('overflow-hidden');
+      document.body.classList.add('overflow-hidden');
     }
   }
 </script>
-</body>
+</body> class="bg-gray-50 overflow-x-hidden">
 </html>
 
             
