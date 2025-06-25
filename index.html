@@ -344,8 +344,21 @@ body {
     <script>
   function toggleKai() {
     const modal = document.getElementById('kai-modal');
-    modal.classList.toggle('hidden');
-    modal.classList.toggle('flex'); // flex enables centering
+    const body = document.body;
+
+    const isOpen = !modal.classList.contains('hidden');
+
+    if (isOpen) {
+      // Hide modal
+      modal.classList.add('hidden');
+      modal.classList.remove('flex');
+      body.classList.remove('overflow-hidden');
+    } else {
+      // Show modal
+      modal.classList.remove('hidden');
+      modal.classList.add('flex');
+      body.classList.add('overflow-hidden');
+    }
   }
 </script>
 </body>
