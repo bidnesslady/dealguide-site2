@@ -342,9 +342,25 @@ body {
     ></iframe>
   </div>
 </div>
+<!-- Kai Chat Toggle Script -->
+<script>
+  function toggleKai() {
+    const modal = document.getElementById('kai-modal');
+    const isOpen = !modal.classList.contains('hidden');
+
+    if (isOpen) {
+      modal.classList.add('hidden');
+      modal.classList.remove('flex');
+    } else {
+      modal.classList.remove('hidden');
+      modal.classList.add('flex');
+    }
+  }
 </script>
-</body> class="bg-gray-50 overflow-x-hidden">
+
+</body>
 </html>
+
 
             
 
