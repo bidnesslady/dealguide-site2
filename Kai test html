@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Kai Test</title>
+  <style>
+    body, html { margin: 0; padding: 0; height: 100%; }
+    #test-modal {
+      position: fixed; inset: 0; display: flex;
+      justify-content: center; align-items: center;
+      background: rgba(0,0,0,0.5);
+    }
+    #test-modal > div {
+      width: 360px; height: 600px;
+      background: white; border-radius: 12px;
+      overflow: auto;
+    }
+    iframe { width: 100%; height: 100%; border: none; }
+  </style>
+</head>
+<body>
+  <div id="test-modal">
+    <div>
+      <iframe
+        src="https://www.chatbase.co/chatbot-iframe/Wctg7kjYIwL6_3us9hpvQ"
+        allow="microphone; clipboard-write"
+        sandbox="allow-scripts allow-same-origin allow-forms allow-popups">
+      </iframe>
+    </div>
+  </div>
+</body>
+</html>
